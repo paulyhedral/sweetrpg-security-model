@@ -3,7 +3,7 @@ import PackageDescription
 let package = Package(
   name: "Models",
   products: [
-  .library(name: "Models",
+  .library(name: "Models"),
   ],
       dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "2.1.0")),
