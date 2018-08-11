@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
   name: "sweetrpg-security-model",
   products: [
-  .library(name: "sweetrpg-security-model", targets: ["Models"])
+  .library(name: "SecurityModel", targets: ["Model"])
   ],
       dependencies: [
         // 💧 A server-side Swift web framework.
@@ -13,9 +13,9 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Models",
+            name: "Model",
             dependencies: ["Vapor", "FluentProvider"]
         ),
-        .testTarget(name: "ModelTests", dependencies: ["Models", "Testing"])
+        .testTarget(name: "ModelTests", dependencies: ["Model", "Testing"])
     ]
 )
