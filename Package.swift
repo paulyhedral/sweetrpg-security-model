@@ -1,18 +1,20 @@
+// swift-tools-version:4.0
 import PackageDescription
 
 let package = Package(
-  name: "Models",
+  name: "sweetrpg-security-model",
   products: [
-  .library(name: "Models"
+  .library(name: "sweetrpg-security-model", targets: ["Models"])
   ],
       dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "2.1.0")),
-        .package(url: "https://github.com/vapor/fluent-provider.git", .upToNextMajor(from: "1.2.0")),
+        // 💧 A server-side Swift web framework.
+        .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
+        .package(url: "https://github.com/vapor/fluent-provider.git", from: "3.0.0"),
     ],
     targets: [
         .target(
             name: "Models",
-            dependencies: ["Vapor", "FluentProvider"],
+            dependencies: ["Vapor", "FluentProvider"]
         ),
         .testTarget(name: "ModelTests", dependencies: ["Models", "Testing"])
     ]
