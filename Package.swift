@@ -3,9 +3,9 @@ import PackageDescription
 
 
 let package = Package(
-    name: "SweetRPGSecurityModel",
+    name: "SecurityModel",
     products: [
-        .library(name: "SweetRPGSecurityModel", targets: ["SweetRPGSecurityModel"]),
+        .library(name: "SecurityModel", targets: ["SecurityModel"]),
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.
@@ -15,7 +15,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/fluent-mysql.git", from: "3.0.0"),
     ],
     targets: [
-        .target(name: "SweetRPGSecurityModel", dependencies: ["FluentMySQL", "Vapor"]),
-        .testTarget(name: "ModelTests", dependencies: ["SweetRPGSecurityModel"]),
+        .target(name: "SecurityModel", dependencies: ["FluentMySQL", "Vapor"]),
+        .testTarget(name: "SecurityModelTests", dependencies: ["SecurityModel"]),
     ]
 )
