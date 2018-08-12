@@ -1,10 +1,11 @@
 // swift-tools-version:4.0
 import PackageDescription
 
+
 let package = Package(
     name: "SweetRPGSecurityModel",
     products: [
-        .library(name: "X", targets: ["Model"]),
+        .library(name: "SweetRPGSecurityModel", targets: ["Model"]),
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.
